@@ -102,7 +102,7 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
       如果写了track by , 就会解析 track by 的表达式。得到一个解析函数 trackByExpGetter.
         在link 阶段定义 trackByIdExpFn ,其中 为 hashFnLocals 添加一些属性后,在当前作用域上运行
         trackByExpGetter($scope, hashFnLocals),并把结果返回,得到唯一标识.
-        hashFnLocals 添加的熟悉为 key(如果有 ),value,$index.
+        hashFnLocals 添加的属性为 key(如果有 ),value,$index.
         上面的key,value 只是对应的表达式. 我们写ng-repeat 时可以这样写
         <span ng-repeat="(key,value) in list track by key"></span>
         <span ng-repeat="(key,value) in list track by value"></span>
