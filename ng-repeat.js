@@ -57,7 +57,7 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
     // 为 true时: <div></div>
     // 为element时: <span ng-repeat="item in list"><div></div></span>
     priority: 1000,
-    terminal: true, //阶段其子元素和其上优先级低于 1000的所有指令的编译
+    terminal: true, //截断其子元素和其上优先级低于 1000的所有指令的编译
     $$tlb: true, //不知道是撒
     compile: function ngRepeatCompile($element, $attr) {
       var expression = $attr.ngRepeat; //拿到 ng-repeat 的表达式
